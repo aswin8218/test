@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarMatch - Find Your Perfect Scholarship</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+   
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Scholar<span>Match</span></a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#scholarship-finder">Find Scholarships</a></li>
+                    <li><a href="login.html" class="btn btn-secondary">Log In</a></li>
+                    <li><a href="signup.html" class="btn btn-primary">Sign Up</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Landing Page - Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1>Find the <span style="color: var(--accent-color);">Perfect Scholarship</span> For Your Future</h1>
+                    <p>Our intelligent matching system connects students with scholarships that fit their unique profile, increasing your chances of getting financial aid.</p>
+                    <div class="hero-buttons">
+                        <a href="#scholarship-finder" class="btn btn-primary">Find Scholarships <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+                    </div>
+                </div>
+                <img src="assets\Adobe Express - file.png" alt="Students celebrating scholarship" class="hero-image fade-in delay-2">
+            </div>
+        </section>
+
+        <!-- Student Details Form Section -->
+        <section class="scholarship-form-section" id="scholarship-finder">
+            <div class="container">
+                <div class="section-title fade-in">
+                    <h2>Find Your Perfect Scholarships</h2>
+                    <p>Fill out your profile and let our system match you with relevant scholarships in minutes.</p>
+                </div>
+                <div class="form-container fade-in delay-1">
+                    <form id="studentDetailsForm">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="course">Course</label>
+                                <select id="course" name="course" required>
+                                    <option value="">Select your course</option>
+                                    <option value="btech">B.Tech</option>
+                                    <option value="be">B.E.</option>
+                                    <option value="bsc">B.Sc.</option>
+                                    <option value="bcom">B.Com</option>
+                                    <option value="ba">B.A.</option>
+                                    <option value="mtech">M.Tech</option>
+                                    <option value="me">M.E.</option>
+                                    <option value="msc">M.Sc.</option>
+                                    <option value="mcom">M.Com</option>
+                                    <option value="ma">M.A.</option>
+                                    <option value="phd">Ph.D.</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="year">Year of Study</label>
+                                <select id="year" name="year" required>
+                                    <option value="">Select your year</option>
+                                    <option value="1">1st Year</option>
+                                    <option value="2">2nd Year</option>
+                                    <option value="3">3rd Year</option>
+                                    <option value="4">4th Year</option>
+                                    <option value="5">5th Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="field">Field of Study</label>
+                                <select id="field" name="field" required>
+                                    <option value="">Select your field of study</option>
+                                    <option value="engineering">Engineering</option>
+                                    <option value="medicine">Medicine</option>
+                                    <option value="arts">Arts</option>
+                                    <option value="commerce">Commerce</option>
+                                    <option value="science">Science</option>
+                                    <option value="law">Law</option>
+                                    <option value="management">Management</option>
+                                    <option value="education">Education</option>
+                                    <option value="agriculture">Agriculture</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="sgpa">SGPA/CGPA (out of 10.0)</label>
+                                <input type="number" id="sgpa" name="sgpa" min="0" max="10" step="0.01" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender" required>
+                                    <option value="">Select your gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer_not_to_say">Prefer not to say</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="income">Annual Family Income (₹)</label>
+                                <select id="income" name="income" required>
+                                    <option value="">Select income range</option>
+                                    <option value="below_1lakh">Below ₹1,00,000</option>
+                                    <option value="1lakh_2lakh">₹1,00,000 - ₹2,00,000</option>
+                                    <option value="2lakh_3lakh">₹2,00,000 - ₹3,00,000</option>
+                                    <option value="3lakh_5lakh">₹3,00,000 - ₹5,00,000</option>
+                                    <option value="5lakh_8lakh">₹5,00,000 - ₹8,00,000</option>
+                                    <option value="above_8lakh">Above ₹8,00,000</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="caste">Caste Category</label>
+                                <select id="caste" name="caste" required>
+                                    <option value="">Select your category</option>
+                                    <option value="general">General</option>
+                                    <option value="obc">OBC</option>
+                                    <option value="sc">SC</option>
+                                    <option value="st">ST</option>
+                                    <option value="ews">EWS</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="religion">Religion</label>
+                                <select id="religion" name="religion" required>
+                                    <option value="">Select your religion</option>
+                                    <option value="hindu">Hindu</option>
+                                    <option value="muslim">Muslim</option>
+                                    <option value="christian">Christian</option>
+                                    <option value="sikh">Sikh</option>
+                                    <option value="buddhist">Buddhist</option>
+                                    <option value="jain">Jain</option>
+                                    <option value="parsi">Parsi</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>Special Categories (Select all that apply)</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="singleParent" name="categories" value="singleParent">
+                                    <label for="singleParent">Single Parent Family</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="disabled" name="categories" value="disabled">
+                                    <label for="disabled">Person with Disability</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="orphan" name="categories" value="orphan">
+                                    <label for="orphan">Orphan</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="rural" name="categories" value="rural">
+                                    <label for="rural">Rural Background</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="minority" name="categories" value="minority">
+                                    <label for="minority">Minority</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="firstGen" name="categories" value="firstGen">
+                                    <label for="firstGen">First Generation Student</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Find Matching Scholarships</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scholarship Results Section (Hidden initially, shown after form submission) -->
+        <section class="scholarship-results" id="scholarship-results" style="display: none;">
+            <div class="container">
+                <div class="results-header fade-in">
+                    <h2>Scholarships Matching Your Profile</h2>
+                    <p>We found <span id="scholarship-count">0</span> scholarships that match your profile</p>
+                </div>
+                
+                <div class="filters fade-in delay-1">
+                    <div class="filters-title">
+                        <h3>Filter Results</h3>
+                        <button class="toggle-filters" id="toggle-filters">
+                            <i class="fas fa-sliders-h"></i>
+                        </button>
+                    </div>
+                    <div class="filters-content" id="filters-content">
+                        <div class="filters-form">
+                            <div class="input-group">
+                                <label for="filter-amount">Amount Range</label>
+                                <select id="filter-amount">
+                                    <option value="all">All Amounts</option>
+                                    <option value="under_50k">Under ₹50,000</option>
+                                    <option value="50k_1lakh">₹50,000 - ₹1,00,000</option>
+                                    <option value="1lakh_3lakh">₹1,00,000 - ₹3,00,000</option>
+                                    <option value="above_3lakh">Above ₹3,00,000</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="filter-deadline">Deadline</label>
+                                <select id="filter-deadline">
+                                    <option value="all">All Deadlines</option>
+                                    <option value="1_month">Within 1 Month</option>
+                                    <option value="3_months">Within 3 Months</option>
+                                    <option value="6_months">Within 6 Months</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="filter-eligibility">Eligibility</label>
+                                <select id="filter-eligibility">
+                                    <option value="all">All Eligibility</option>
+                                    <option value="merit">Merit Based</option>
+                                    <option value="need">Need Based</option>
+                                    <option value="category">Category Based</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="filter-sort">Sort By</label>
+                                <select id="filter-sort">
+                                    <option value="relevance">Relevance</option>
+                                    <option value="amount_high">Amount (High to Low)</option>
+                                    <option value="amount_low">Amount (Low to High)</option>
+                                    <option value="deadline">Deadline (Closest First)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary" id="apply-filters">Apply Filters</button>
+                    </div>
+                </div>
+                
+                <div class="result-cards fade-in delay-2" id="scholarship-cards">
+                    <!-- Scholarship cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 ScholarMatch. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js" ></script>
+    <script>// Check for success redirect
+        window.addEventListener('load', () => {
+          if (sessionStorage.getItem('signupSuccess')) {
+            alert('Signup successful! Please check your email for verification.');
+            sessionStorage.removeItem('signupSuccess');
+          }
+        });</script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              // Handle signup success
+              if (sessionStorage.getItem('signupSuccess')) {
+                showNotification('🎉 Signup successful! Please check your email for verification.', 'success');
+                sessionStorage.removeItem('signupSuccess');
+              }
+            
+              // Handle login success
+              if (sessionStorage.getItem('loginSuccess')) {
+                showNotification('👋 Welcome back! You have successfully logged in.', 'success');
+                sessionStorage.removeItem('loginSuccess');
+              }
+            });
+            
+            function showNotification(message, type) {
+              const notification = document.createElement('div');
+              notification.className = `notification ${type}`;
+              notification.innerHTML = `
+                <span>${message}</span>
+                <button class="close-btn">&times;</button>
+              `;
+            
+              notification.querySelector('.close-btn').addEventListener('click', () => {
+                notification.remove();
+              });
+            
+              document.body.prepend(notification);
+              setTimeout(() => notification.remove(), 5000);
+            }
+            </script>
+    
+</body>
+</html>
